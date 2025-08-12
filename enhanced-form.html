@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Event registration form with lists, tables, and media using HTML5 best practices">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        ul, ol {
+            margin: 0 0 15px 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select, button {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        img, video, audio {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Annual Tech Conference Registration</h1>
+    <p>Fill out this form to secure your spot. Fields marked with * are required.</p>
+</header>
+
+<main>
+
+    <!-- Lists Section -->
+    <section>
+        <h2>Conference Highlights</h2>
+        <ul>
+            <li>Welcome Kit including:
+                <ul>
+                    <li>Notebook & Pen</li>
+                    <li>Event T-shirt</li>
+                    <li>Discount Coupons</li>
+                </ul>
+            </li>
+            <li>Workshops on:
+                <ol>
+                    <li>Web Development</li>
+                    <li>Data Science</li>
+                    <li>Cybersecurity</li>
+                </ol>
+            </li>
+            <li>Networking lunch with industry leaders</li>
+        </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Event Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                    <th>Speaker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Registration & Coffee</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Opening Keynote</td>
+                    <td>Jane Doe</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Workshop 1: Web Development</td>
+                    <td>John Smith</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Event Preview</h2>
+
+        <!-- Tech world image -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="People working together in tech" loading="lazy">
+            <figcaption>Innovators collaborating in the tech world.</figcaption>
+        </figure>
+
+        <!-- Tech-related video -->
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Ruger - Dudu audio -->
+        <audio controls>
+            <source src="https://example.com/audio/Ruger-Dudu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            
+            <div>
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" pattern="\+?\d{9,15}" required>
+            </div>
+
+            <div>
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div>
+                <label for="ticket">Ticket Type *</label>
+                <select id="ticket" name="ticket" required>
+                    <option value="">-- Select ticket type --</option>
+                    <option value="standard">Standard</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Preferred Sessions</label><br>
+                <input type="checkbox" id="web" name="session" value="web">
+                <label for="web">Web Development</label>
+                <input type="checkbox" id="data" name="session" value="data">
+                <label for="data">Data Science</label>
+                <input type="checkbox" id="cyber" name="session" value="cyber">
+                <label for="cyber">Cybersecurity</label>
+            </div>
+
+            <div>
+                <label>Gender *</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div>
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Write here..."></textarea>
+            </div>
+
+            <div>
+                <label for="reg-id">Registration ID</label>
+                <input type="text" id="reg-id" value="AUTO-REG-2025" readonly>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Annual Tech Conference. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
