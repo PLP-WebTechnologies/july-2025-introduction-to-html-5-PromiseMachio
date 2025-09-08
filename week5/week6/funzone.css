@@ -1,0 +1,122 @@
+/* ========== GENERAL STYLING ========== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark {
+  background: #222;
+  color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ========== FAQ STYLING ========== */
+.faq-answer {
+  display: none; /* hidden until clicked */
+  margin: 5px 0;
+}
+
+/* ========== FORM STYLING ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+form input {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+#successMessage {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ========== DROPDOWN MENU STYLING ========== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; /* hidden until button clicked */
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  background: #eee;
+}
+
+/* ========== TABBED INTERFACE STYLING ========== */
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 8px 15px;
+  margin-right: 5px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+.tab-content {
+  display: none; /* hidden until activated */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  border-radius: 4px;
+}

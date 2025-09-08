@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Page</title>
+  <link rel="stylesheet" href="funzone.css">
+</head>
+<body>
+
+  <header>
+    <h1> Interactive Web Page</h1>
+    <button id="themeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Counter Section -->
+    <section>
+      <h2>🎮 Counter Game</h2>
+      <p>Count: <span id="counterValue">0</span></p>
+      <button id="incrementBtn">Increment</button>
+      <button id="resetBtn"> Reset</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+      <h2> FAQ</h2>
+      <div class="faq">
+        <h3 class="faq-question">What is JavaScript?</h3>
+        <p class="faq-answer">JavaScript is a programming language that makes web pages interactive.</p>
+      </div>
+      <div class="faq">
+        <h3 class="faq-question">What is DOM?</h3>
+        <p class="faq-answer">DOM stands for Document Object Model—it represents the page structure.</p>
+      </div>
+    </section>
+
+    <!-- Dropdown Menu Section -->
+    <section>
+      <h2>📂 Dropdown Menu</h2>
+      <div class="dropdown">
+        <button id="dropdownBtn">Select an Option ▼</button>
+        <ul id="dropdownMenu" class="dropdown-content">
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+      </div>
+      <p id="selectedOption">Selected: None</p>
+    </section>
+
+    <!-- Tabbed Interface Section -->
+    <section>
+      <h2>🗂️ Tabbed Interface</h2>
+      <div class="tabs">
+        <button class="tab-btn" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+      </div>
+      <div class="tab-content" id="tab1">Content for Tab 1</div>
+      <div class="tab-content" id="tab2">Content for Tab 2</div>
+      <div class="tab-content" id="tab3">Content for Tab 3</div>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+      <h2>📋 Registration Form</h2>
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error" id="nameError"></small>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <small class="error" id="emailError"></small>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <small class="error" id="passwordError"></small>
+
+        <button type="submit">Submit</button>
+        <p id="successMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="funzone.js"></script>
+</body>
+</html>
